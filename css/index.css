@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "HandilPro";
+  src: url(otfs/HandilPro.otf);
+}
+
+body{
+  background: #0a0a0a;
+  margin:0px;
+  font-family: "HandilPro";
+}
+
+#header {
+  position: fixed;
+}
+
+.header{
+    background-color: #000000b7;
+    color: white;
+    font-size: 30px;
+    z-index: 1;
+    position : fixed;
+    height: 70px;
+    width: 100%;
+    margin:0px;
+}
+
+.header img{
+  padding: 3px;
+}
+
+.header button{
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.flex{
+  display: flex; 
+  justify-content: center;
+}
+
+h1{
+  margin: 0%;
+}
+
+.banner{
+  width: 100%;
+}
+  
+.content{
+  padding-top: 5%;
+}
+
+.glowing{
+  border-width:0;
+  background: transparent;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 30px;
+  background: transparent;
+  float: right;
+  font-family: monospace;
+}
+
+.glowing:hover{
+  background: #89CFF0;
+  transition: all .5s;
+  box-shadow: 0 0 50px #FFFAA0;
+}
+
+.glowing:hover::after{
+  background: transparent;
+  transition: all .5s;
+}
+
+.inside{
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding:1%;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.divide-text{
+  font-style:bold;
+  color: aliceblue;
+  font-size: 50px;
+}
+
+.item{
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 100%;
+  width: 30%;
+  background-color: #89CFF0;
+  padding: 1%;
+}
+.item:hover{
+  transition: 1s;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 107%;
+  width: 37%;
+  background-color: #89CFF0;
+  padding: 1%;
+}
+.item:hover:after{
+  transition: 1s;
+}
+
+.item-images{
+  height: 100%;
+  width: 100%;
+}
+
+.inside-item{
+  background-color: aqua;
+  padding:1.5%;
+  text-align: center;
+}
+
+.item-void{
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 100%;
+  width: 30%;
+  padding: 1%;
+}
