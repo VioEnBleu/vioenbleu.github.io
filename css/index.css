@@ -9,6 +9,17 @@ body{
   font-family: "HandilPro";
 }
 
+a{
+  color: #0a0a0a;
+  font-style: normal;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+
 #header {
   position: fixed;
 }
@@ -16,7 +27,7 @@ body{
 .header{
     background-color: #000000b7;
     color: white;
-    font-size: 30px;
+    font-size: calc(1em + 1vw);
     z-index: 1;
     position : fixed;
     height: 70px;
@@ -57,7 +68,7 @@ h1{
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 100%;
   background: transparent;
   float: right;
   font-family: monospace;
@@ -91,7 +102,7 @@ h1{
 .divide-text{
   font-style:bold;
   color: aliceblue;
-  font-size: 50px;
+  font-size: calc(1em + 1vw);
 }
 
 .item{
@@ -111,8 +122,14 @@ h1{
   background-color: #89CFF0;
   padding: 1%;
 }
-.item:hover:after{
+.item:hover::after{
   transition: 1s;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 100%;
+  width: 30%;
+  background-color: #89CFF0;
+  padding: 1%;
 }
 
 .item-images{
@@ -124,6 +141,7 @@ h1{
   background-color: aqua;
   padding:1.5%;
   text-align: center;
+  font-size: calc(0.2em + 1vw);
 }
 
 .item-void{
@@ -133,3 +151,4 @@ h1{
   width: 30%;
   padding: 1%;
 }
+
