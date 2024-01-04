@@ -102,7 +102,7 @@ h1{
 .divide-text{
   font-style:bold;
   color: aliceblue;
-  font-size: 50px;
+  font-size: calc(0.2em + 1.2vw);
 }
 
 .item{
