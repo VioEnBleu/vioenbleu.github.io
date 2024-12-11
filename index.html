@@ -1,114 +1,208 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vio's world</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
     <link rel="icon" type="image/png" href="./images/logo.png">
-    <meta name="viewport" content="width=device-width" />
+    <title>Vio's World - Acceuil</title>
 </head>
-
 <body>
-    <div class="flex header">
-        <img src="./images/icons/logo-negative.png">
-            <button class="glowing">
-                Home
-            </button>
-            <button class="glowing">
-                Résaux
-            </button>
-            <button class="glowing">
-                GitHub
-            </button>
-    </div>
-    <img class="banner" src="./images/banner.png">
-    
-        
-    <div class="inside">
-        <hr>
-        <h1 class="divide-text">Projets en Python</h1>
-        <div class="container">
-            <div class="item">
-                <img src="./images/icons/allie.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>Allie</h1></div>
-            </div>
-            <div class="item">
-                <a href="https://github.com/VioEnBleu/vioenbleu.github.io">
-                <img src="./images/icons/unknow.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>PrivateChat</h1></div>
-                </a>
-            </div>
-            <div class="item">
-                <img src="./images/icons/chat-eclate.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>GptInAPP</h1></div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="item">
-                <a href="https://github.com/VioEnBleu/VioMakeALauncher">
-                <img src="./images/icons/logo-colorfull.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>Vio's launcher</h1></div>
-                </a>
-            </div>
-            <div class="item-void">
-                 
-            </div>
-            <div class="item-void">
-                 
-            </div>
-        </div>
-        
-        <hr>
-        <h1 class="divide-text">Projets en HTML / CSS / JavaScript</h1>
-        
-        <div class="container">
-            <div class="item">
-                <img src="./images/icons/logo-negative.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>Vio's world</h1></div>
-            </div>
-            <div class="item">
-                <img src="./images/logo.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>Vio's world V1</h1></div>
-            </div>
-            <div class="item-void">
+    <header class="">
+            <button class="better-button better-header header-margin-corrector">
+                Acceuil
+            </button> 
+            <a href="./projects.html" style="position: relative;display: contents;">
+                <button class="better-button better-header header-margin-corrector">
+                    Mes projets
+                </button>
+            </a> 
+             
+            <a href="https://github.com/vioenbleu" style="position: relative;display: contents;">
+                <button class="better-button better-header header-margin-corrector">
+                    Mon GitHub
+                </button>
+            </a>  
+    </header>
+    <div class="colorfull">
+        <div class="super_container">
+                <h1>
+                    Mes projets
+                </h1>
                 
-            </div>
         </div>
-        <hr>
-        <h1 class="divide-text">Autres langages travaillés</h1>
         
-        <div class="container">
-            <div class="item">
-                <img src="./images/icons/cpp.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>C++</h1></div>
+        <div class="super_container">
+            <div class="container">
+                <img src="./images/icons/allie.png" class="displayed">
+                <div class="inside">
+                    <h1>Allie</h1>
+                    <h2>
+                        Allie est une intelligence artificielle que j'ai developpée et utilisée sur la base d'un fork de llama, un ensembre de data brute destinée à l'IA crée par facebook. Elle utilise le model 7B, petit et pratique...
+                    </h2>
+                    <a href="./projects.html#allie">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="item">
-                <img src="./images/icons/c.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>C / C#</h1></div>
+            <div class="container">
+                <img src="./images/icons/logo-colorfull.png" class="displayed">
+                <div class="inside">
+                    <h1>Vio's World</h1>
+                    <h2>
+                        Vio's World est le site que vous consultez actuellement. Fais en CSS et en HTML, il est prévu pour toute taille d'écran d'ordinateur...
+                    </h2>
+                    <a href="./projects.html#viosworld">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="item">
-                <img src="./images/icons/php.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>PhP</h1></div>
+            <div class="container">
+                <img src="./images/icons/bsbc.png" class="displayed">
+                <div class="inside">
+                    <h1>BSBC Server</h1>
+                    <h2>
+                        Le BSBC Server est un serveur privé de data et de calcul destiné à etre utilisé par les membres du BSBCrew. Actuellement utilisé pour faire fontionner un serveur minecraft...
+                    </h2>
+                    <a href="./projects.html#bsbc">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="item">
-                <img src="./images/icons/bash.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>Bash</h1></div>
+    
+        <div class="super_container">
+            <div class="container">
+                <img src="./images/icons/pc.png" class="displayed">
+                <div class="inside">
+                    <h2  style="color: azure;">
+                        Vio's Workbench
+                    </h2>
+                    <h3>
+                        De la théorie au montage en passant par la commande, j'ai créé plusieurs PC de jeux comme de bureautique. Se tenir à jour des nouvelles technologies fait aussi parti du métier...
+                    </h3>
+                    <a href="./projects.html#pccreation">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="item">
-                <img src="./images/icons/lua.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>LUA</h1></div>
+            <div class="container">
+                <img src="./images/icons/qsharp.png" class="displayed">
+                <div class="inside">
+                    <h2  style="color: azure;">
+                        Quantum Reflexion
+                    </h2>
+                    <h3>
+                        Quand en 2019 Microsoft ont annoncés mettre à disposition le Q#, je me suis essayé au langage, ce dernier permettant de tirer profit de la physique quantique pour les ordinateurs...
+                    </h3>
+                    <a href="./projects.html#qreflexions">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="item">
-                <img src="./images/icons/java.png" class="item-images pad1">
-                <div class="inside-item pad1"><h1>Java</h1></div>
+            <div class="container">
+                <img src="./images/icons/netflop.png" class="displayed">
+                <div class="inside">
+                    <h2  style="color: azure;">
+                        Netflop
+                    </h2>
+                    <h3>
+                        Les sites de streaming et YouTube, le tout centralisé dans un tout en un portable, fontionnant sur un Raspberry Pi 4 B 8Go. Rapide et peu gourmant, Netflop a une interface en HTML, CSS et PHP intuitive...
+                    </h3>
+                    <a href="./projects.html#netflop">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <img src="./images/icons/allie.png" class="displayed">
+                <div class="inside">
+                    <h2  style="color: azure;">
+                        Allie's World
+                    </h2>
+                    <h3>
+                        Lassé des systemes d'exploitation classiques et sans empruntes ? Voici Allie's World, un systeme d'exploitation basé autour de l'IA du meme nom, Allie. Orienté QOL (Quality Of Life), ce systeme d'eploitation permet de simplifier les taches compliquées...
+                    </h3>
+                    <a href="./projects.html#alliesworld">
+                        <button class="better-button container-button">
+                            Lire plus ➛
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
+        <a class="seemore" href="./projects.html">
+            <button class="better-button">
+                Voir plus ➛
+            </button>
+        </a>
+    </div>
 
+
+
+    <div class="colorfull">
+        <div class="super_container">
+                <h1>
+                    Mes langages travaillés
+                </h1>
+                
+        </div>
+        
+        <div class="super_container">
+            <div class="container">
+                <img src="./images/icons/c.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/cpp.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/qsharp.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/mysql.png" class="displayed">
+            </div>
+        </div>
+        <div class="super_container">
+            <div class="container">
+                <img src="./images/icons/py.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/java.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/lua.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/bash.png" class="displayed">
+            </div>
+        </div>
+        <div class="super_container">
+            <div class="container">
+                <img src="./images/icons/html.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/css.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/php.png" class="displayed">
+            </div>
+            <div class="container">
+                <img src="./images/icons/js.png" class="displayed">
+            </div>
+        </div>
+        
     </div>
 </body>
+</html>
