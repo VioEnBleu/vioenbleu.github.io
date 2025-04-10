@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VioEnBleu | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./images/logo-colorfull.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+        }
+        
+        .carousel-item {
+            display: none;
+        }
+        
+        .carousel-item.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <nav class="fixed w-full bg-slate-900/80 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold gradient-text">VioEnBleu</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-blue-300 hover:text-white">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">About</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Skills</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Projects</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-blue-300 hover:text-white">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">VioEnBleu</span></h1>
+                <h2 class="text-xl md:text-2xl text-gray-300 mb-6">Independent Developer & Tech Enthusiast</h2>
+                <p class="text-gray-400 mb-8 max-w-lg">
+                    I build AIs, games, applications, from simple script to entire systems. Ask me and I will tell you if I did it.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-md text-white font-medium hover:opacity-90 transition">View Projects</a>
+                    <a href="#contact" class="px-6 py-3 border border-indigo-500 rounded-md text-indigo-300 font-medium hover:bg-indigo-900/30 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500/20 via-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-spin-slow"></div>
+                    <div class="absolute inset-4 rounded-full border-2 border-indigo-400/30 animate-spin-slow-reverse"></div>
+                    <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-slate-800 overflow-hidden border-2 border-indigo-500/30">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
+                            <img src="./images/violette.png" alt="Violette Evergarden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-slate-800/50 rounded-xl my-12">
+        <h2 class="text-3xl font-bold mb-8 text-center gradient-text">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                <div class="hidden md:block w-48 h-48 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 p-1">
+                    <div class="w-full h-full rounded-full bg-slate-800 overflow-hidden">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
+                            <img src="./images/violette.png" alt="Violette Evergarden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <p class="text-gray-300 mb-6">
+                    I'm an 18-year-old independent developer with a passion for creating innovative software solutions. 
+                    My journey in programming started at a young age, and I've since developed a diverse skill set 
+                    across multiple programming languages and technologies.
+                </p>
+                <p class="text-gray-300 mb-6">
+                    What drives me is the challenge of solving complex problems and the satisfaction of seeing my 
+                    creations come to life. I believe in writing clean, efficient code and continuously learning 
+                    new technologies to stay at the forefront of development.
+                </p>
+                <p class="text-gray-300">
+                    When I'm not coding, you can find me reading, listening to music or play video games. 
+                    Sports and cooking are also part of my passions and my life.
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">My Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                <span class="text-gray-300 font-medium">HTML5</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                <span class="text-gray-300 font-medium">CSS3</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fab fa-js-square text-4xl text-yellow-400 mb-2"></i>
+                <span class="text-gray-300 font-medium">JavaScript</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fab fa-php text-4xl text-purple-500 mb-2"></i>
+                <span class="text-gray-300 font-medium">PHP</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fas fa-database text-4xl text-blue-300 mb-2"></i>
+                <span class="text-gray-300 font-medium">MySQL</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fab fa-python text-4xl text-green-500 mb-2"></i>
+                <span class="text-gray-300 font-medium">Python</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fab fa-java text-4xl text-red-500 mb-2"></i>
+                <span class="text-gray-300 font-medium">Java</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fas fa-code text-4xl text-purple-400 mb-2"></i>
+                <span class="text-gray-300 font-medium">C#</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fas fa-terminal text-4xl text-blue-400 mb-2"></i>
+                <span class="text-gray-300 font-medium">C/C++</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fas fa-gamepad text-4xl text-indigo-300 mb-2"></i>
+                <span class="text-gray-300 font-medium">Lua</span>
+            </div>
+            <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                <i class="fas fa-terminal text-4xl text-gray-400 mb-2"></i>
+                <span class="text-gray-300 font-medium">Bash</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-slate-800/50 rounded-xl my-12">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Some Of My Projects</h2>
+        
+        <div class="relative">
+            <div class="carousel-container overflow-hidden">
+                <div class="carousel-item active">
+                    <div class="project-card bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700/50">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                                <div class="bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-lg h-64 flex items-center justify-center">
+                                    <img src="./images/allie.png" alt="Allie the fun bot :D" class="">
+                                </div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <h3 class="text-2xl font-bold text-white mb-4">Allie - AI Assistant</h3>
+                                <p class="text-gray-300 mb-4">
+                                    Allie is an advanced AI assistant similar to Gemini, designed to help users with various tasks 
+                                    including information retrieval, task automation, and natural language processing.
+                                    Using Llama 8b, Allie is more than capable when it come to simple tasks.
+                                </p>
+                                <p class="text-gray-300 mb-6">
+                                    
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Python</span>
+                                    <span class="px-3 py-1 bg-yellow-900/50 text-yellow-300 rounded-full text-sm">JavaScript</span>
+                                    <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">AI</span>
+                                    <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">NLP</span>
+                                </div>
+                                <a href="./allie/" class="inline-flex items-center text-blue-400 hover:text-blue-300">
+                                    Learn More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="project-card bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700/50">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                                <div class="bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-lg h-64 flex items-center justify-center">
+                                    <div class="text-center p-4">
+                                        <i class="fas fa-tools text-6xl gradient-text mb-4"></i>
+                                        <h3 class="text-2xl font-bold text-white">Vio's Workbench</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <h3 class="text-2xl font-bold text-white mb-4">Vio's Workbench</h3>
+                                <p class="text-gray-300 mb-4">
+                                    A custom PC building service that handles everything from price comparison to component 
+                                    selection and final shipment. This project showcases my hardware capabilities.
+                                    I made a total of 17 custom buils without counting my personal computer.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">Hardware</span>
+                                    <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Tech watch</span>
+                                    <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">Bash</span>
+                                    <span class="px-3 py-1 bg-yellow-900/50 text-yellow-300 rounded-full text-sm">Customer service</span>
+                                </div>
+                                <a href="./workbench/" class="inline-flex items-center text-blue-400 hover:text-blue-300">
+                                    Learn More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="project-card bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700/50">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                                <div class="bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-lg h-64 flex items-center justify-center">
+                                    <div class="text-center p-4">
+                                        <img src="./images/nebulanode.png" alt="Allie the fun bot :D">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <h3 class="text-2xl font-bold text-white mb-4">NebulaNode</h3>
+                                <p class="text-gray-300 mb-4">
+                                    A simple but efficient server used by the memebers of the group to run some VMs, scripts, servers and more.
+                                    Actually on windows 11, a total of 4 persons are using it and contributing to his good work.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">LUA</span>
+                                    <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Parsec</span>
+                                    <span class="px-3 py-1 bg-orange-900/50 text-orange-300 rounded-full text-sm">VLC</span>
+                                    <span class="px-3 py-1 bg-yellow-900/50 text-yellow-300 rounded-full text-sm">Java</span>
+                                    <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Python</span>
+                                </div>
+                                <a href="./nebulanode/" class="inline-flex items-center text-blue-400 hover:text-blue-300">
+                                    Learn More <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="flex justify-center mt-8 space-x-4">
+                <button id="prev-btn" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-gray-300 hover:text-white transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-gray-300 hover:text-white transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-2/2">
+                <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
+                    <h3 class="text-xl font-semibold text-white mb-6">Connect With Me</h3>
+                    <p class="text-gray-300 mb-6">
+                        Interested in collaborating or have a project in mind? Feel free to reach out through 
+                        any of my social media platforms or send me a message directly.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-gray-700/50 flex items-center justify-center mr-4">
+                                <i class="fab fa-github text-grey-600"></i>
+                            </div>
+                            <a href="https://github.com/VioEnBleu" target="_blank" class="text-gray-400 hover:text-blue-300">github.com/VioEnBleu</a>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-sky-900/50 flex items-center justify-center mr-4">
+                                <i class="fab fa-bluesky text-sky-300"></i>
+                            </div>
+                            <a href="https://bsky.app/profile/vioenbleu.com" target="_blank" class="text-sky-400 hover:text-sky-300">bsky.app/VioEnBleu</a>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-purple-300"></i>
+                            </div>
+                            <a href="mailto:vioenbleu@gmail.com" target="_blank" class="text-purple-400 hover:text-sky-300">vioenbleu@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-medium text-white mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://x.com/vioenbleu" class="social-icon w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/vioenbleu" class="social-icon w-10 h-10 rounded-full bg-slate-700 hover:bg-pink-600 flex items-center justify-center text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@VioEnBleu" class="social-icon w-10 h-10 rounded-full bg-slate-700 hover:bg-red-600 flex items-center justify-center text-white">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-800/50 mt-12">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold gradient-text">VioEnBleu</span>
+                <p class="text-gray-500 text-sm mt-1">Independent Developer & Tech Enthusiast</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://github.com/VioEnBleu" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://bsky.app/profile/vioenbleu.com" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-bluesky"></i>
+                </a>
+                <a href="https://x.com/vioenbleu" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 VioEnBleu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentIndex = 0;
+        
+        function showItem(index) {
+            carouselItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showItem(currentIndex);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showItem(currentIndex);
+        });
+        
+    </script>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allie AI | VioEnBleu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="../images/logo-colorfull.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+        }
+        
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        .screenshot {
+            border-radius: 0.5rem;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-900/80 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../" class="text-xl font-bold gradient-text">VioEnBleu</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="px-3 py-2 rounded-md text-sm font-medium text-blue-300 hover:text-white">Overview</a>
+                        <a href="#features" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Features</a>
+                        <a href="#technology" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Technology</a>
+                        <a href="#gallery" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Gallery</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#overview" class="block px-3 py-2 rounded-md text-base font-medium text-blue-300 hover:text-white">Overview</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Features</a>
+                <a href="#technology" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Technology</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4"><span class="gradient-text">Allie</span> AI Assistant</h1>
+                <h2 class="text-xl md:text-2xl text-gray-300 mb-6">Your intelligent companion for everyday tasks</h2>
+                <p class="text-gray-400 mb-8 max-w-lg">
+                    Allie is an advanced AI assistant designed to help users with various tasks including 
+                    information retrieval, codding, and simple accademic knowledge.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#features" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-md text-white font-medium hover:opacity-90 transition">Key features</a>
+                    <a href="#technology" class="px-6 py-3 border border-indigo-500 rounded-md text-indigo-300 font-medium hover:bg-indigo-900/30 transition">Tech Stack</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-500/20 via-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-spin-slow"></div>
+                    <div class="absolute inset-4 rounded-full border-2 border-indigo-400/30 animate-spin-slow-reverse"></div>
+                    <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-slate-800 overflow-hidden border-2 border-indigo-500/30">
+                        <!-- Project image placeholder -->
+                        <img src="../images/allie.png" alt="Allie teh cool AI :D">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-slate-800/50 rounded-xl my-12">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Key Features</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="project-card bg-slate-800 rounded-xl p-6 border border-slate-700/50">
+                <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center mb-4">
+                    <i class="fas fa-comments text-blue-300 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Natural Conversations</h3>
+                <p class="text-gray-300">
+                    Engage in human-like dialogues with context awareness and emotional intelligence for more meaningful interactions.
+                </p>
+            </div>
+            
+            <div class="project-card bg-slate-800 rounded-xl p-6 border border-slate-700/50">
+                <div class="w-12 h-12 rounded-full bg-purple-900/50 flex items-center justify-center mb-4">
+                    <i class="fas fa-tasks text-purple-300 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Deeper explainations</h3>
+                <p class="text-gray-300">
+                    Ask for details, ideas and solutions, ways to improves or just projets to do. She is always creative.
+                </p>
+            </div>
+            
+            <div class="project-card bg-slate-800 rounded-xl p-6 border border-slate-700/50">
+                <div class="w-12 h-12 rounded-full bg-green-900/50 flex items-center justify-center mb-4">
+                    <i class="fas fa-brain text-green-300 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Learning System</h3>
+                <p class="text-gray-300">
+                    Adapts to your preferences and behavior with a simple prompt, providing increasingly personalized assistance.
+                </p>
+            </div>
+            
+            <div class="project-card bg-slate-800 rounded-xl p-6 border border-slate-700/50">
+                <div class="w-12 h-12 rounded-full bg-yellow-900/50 flex items-center justify-center mb-4">
+                    <i class="fas fa-globe text-yellow-300 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Well Know Model</h3>
+                <p class="text-gray-300">
+                    Allie is using the Llama 8b, a world class LLM produced by Meta, direct rival of GPT 3.5 Turbo.
+                </p>
+            </div>
+            
+            <div class="project-card bg-slate-800 rounded-xl p-6 border border-slate-700/50">
+                <div class="w-12 h-12 rounded-full bg-red-900/50 flex items-center justify-center mb-4">
+                    <i class="fas fa-shield-alt text-red-300 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Privacy Focused</h3>
+                <p class="text-gray-300">
+                    Local processing and no server to stock your data. As simple as that. All in your SSD.
+                </p>
+            </div>
+            
+            <div class="project-card bg-slate-800 rounded-xl p-6 border border-slate-700/50">
+                <div class="w-12 h-12 rounded-full bg-indigo-900/50 flex items-center justify-center mb-4">
+                    <i class="fas fa-plug text-indigo-300 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">(Soon) Visual Ecosystem</h3>
+                <p class="text-gray-300">
+                    [In dev state] A good looking avatar in 3d and a customizable voice for more personalized experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Technology Stack</h2>
+        
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/2">
+                <div class="project-card bg-slate-800 rounded-xl p-8 border border-slate-700/50 h-full">
+                    <h3 class="text-xl font-semibold text-white mb-6">Core Technologies</h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-python text-4xl text-green-500 mb-2"></i>
+                            <span class="text-gray-300 font-medium">Python</span>
+                        </div>
+                        <div class="skill-badge bg-yellow-900/50 border border-yellow-500/30 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fas fa-brain text-4xl text-yellow-400 mb-2"></i>
+                            <span class="text-gray-300 font-medium">TensorFlow</span>
+                        </div>
+                        <div class="skill-badge bg-purple-900/50 border border-purple-500/30 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fas fa-network-wired text-4xl text-purple-400 mb-2"></i>
+                            <span class="text-gray-300 font-medium">NLP</span>
+                        </div>
+                        <div class="skill-badge bg-blue-900/50 border border-blue-500/30 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fa-regular fa-chart-bar text-4xl text-blue-400 mb-2"></i>
+                            <span class="text-gray-300 font-medium">JSON</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-medium text-white mb-4">Key Libraries</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-400 mr-2"></i>
+                                <span>Transformers for natural language processing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-400 mr-2"></i>
+                                <span>PyTorch for machine learning models</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-400 mr-2"></i>
+                                <span>A custom API for backend services</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-blue-400 mr-2"></i>
+                                <span>Django for the frontend interface</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <div class="project-card bg-slate-800 rounded-xl p-8 border border-slate-700/50 h-full">
+                    <h3 class="text-xl font-semibold text-white mb-6">Development Highlights</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-lg font-medium text-white mb-2">Architecture</h4>
+                            <p class="text-gray-300">
+                                Modular design with separate components for speech recognition, natural language understanding, 
+                                dialogue management, and response generation. Microservices architecture allows for scalability.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium text-white mb-2">Performance</h4>
+                            <p class="text-gray-300">
+                                Optimized response times under 500ms for most queries. Local processing option reduces latency 
+                                and improves privacy for sensitive requests.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-medium text-white mb-2">Offline</h4>
+                            <p class="text-gray-300">
+                                No need to be in radius of any internet, Allie is on my computer all day long. Don't worry, she can watch youtube sometimes.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300">
+                            <i class="fab fa-github mr-2"></i> Private Project Only
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-800/50 mt-12">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold gradient-text">Allie AI</span>
+                <p class="text-gray-500 text-sm mt-1">An intelligent assistant by VioEnBleu</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-code-branch"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 VioEnBleu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</html>
